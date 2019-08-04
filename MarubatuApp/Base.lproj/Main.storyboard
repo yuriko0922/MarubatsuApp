@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MarubatuApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P96-dP-gbV">
-                                <rect key="frame" x="20" y="659" width="183" height="183"/>
+                                <rect key="frame" x="20" y="412" width="136" height="136"/>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="0.78015303938356162" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="P96-dP-gbV" secondAttribute="height" multiplier="1:1" id="zlA-d1-9UL"/>
@@ -32,7 +32,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wad-XT-kcP">
-                                <rect key="frame" x="211" y="659" width="183" height="183"/>
+                                <rect key="frame" x="164" y="412" width="136" height="136"/>
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBg-aO-dtm">
-                                <rect key="frame" x="20" y="52" width="374" height="100"/>
+                                <rect key="frame" x="20" y="28" width="280" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="npO-7h-hAu"/>
                                 </constraints>
@@ -50,13 +50,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHi-je-Qe9">
+                                <rect key="frame" x="50" y="215" width="220" height="72"/>
+                                <color key="backgroundColor" red="0.97567754983901978" green="0.83104628324508667" blue="0.040718860924243927" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="ヒント">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="hinntoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mRq-h4-Fa6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="P96-dP-gbV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="43I-eE-ggc"/>
+                            <constraint firstItem="RHi-je-Qe9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="79N-rL-EmQ"/>
                             <constraint firstItem="Wad-XT-kcP" firstAttribute="leading" secondItem="P96-dP-gbV" secondAttribute="trailing" constant="8" id="98c-fd-u9r"/>
                             <constraint firstItem="VBg-aO-dtm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="9ww-fz-Fws"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VBg-aO-dtm" secondAttribute="trailing" constant="20" id="I1Y-fB-VW7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RHi-je-Qe9" secondAttribute="trailing" constant="50" id="Leb-Qi-jJv"/>
+                            <constraint firstItem="P96-dP-gbV" firstAttribute="top" secondItem="RHi-je-Qe9" secondAttribute="bottom" constant="125" id="Ohg-c6-png"/>
                             <constraint firstItem="P96-dP-gbV" firstAttribute="height" secondItem="Wad-XT-kcP" secondAttribute="height" id="PLI-nx-D4o"/>
                             <constraint firstItem="VBg-aO-dtm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Qh0-vV-YLV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wad-XT-kcP" secondAttribute="trailing" constant="20" id="gE1-Eh-7sH"/>

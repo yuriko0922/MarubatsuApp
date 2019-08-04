@@ -19,12 +19,18 @@ class ViewController: UIViewController {
     //正解した問題の数
     var okNum: Int = 0
     
+    //ヒント管理
+    var isHint: Bool = false
+    
+    
     let questions: [[String: Any]] = [
         ["question": "イルカは哺乳類である",
-         "answer": true
+         "answer": true,
+         "hint": "イルカは水の中では息ができないんだって"
         ],
         ["question": "ゆりちゃんは背が低い",
-         "answer": false
+         "answer": false,
+         "hint": "ゆりちゃんのあだ名は進撃の巨人だよ"
         ],
     ]
     override func viewDidLoad() {
@@ -118,6 +124,8 @@ class ViewController: UIViewController {
         present(alert,animated: true, completion: nil)
     }
     
+    
+    
     //バツボタン
     @IBAction func batuButton(_ sender: Any) {
         
@@ -127,6 +135,21 @@ class ViewController: UIViewController {
     //マルボタン
     @IBAction func maruButton(_ sender: Any) {
         checkAnswer(yourAnswer: true)
+    }
+    
+    //ヒントボタン
+    @IBAction func hinntoButton(_ sender: Any) {
+        if !isHint {
+
+            let question = questions[currentQuestionNum]
+            
+            if let ans = question["hint"] as? String {
+
+                showAlert(message: ans)
+            }
+            //一回しか使えないヒント
+            isHint = true
+        }
     }
     
     
